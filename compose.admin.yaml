@@ -1,0 +1,8 @@
+services:
+  monitor:
+    environment:
+      ADMIN_MODERATION_API_KEY_FILE: /run/secrets/admin_key
+      ADMIN_MODERATION_SCOPES_FILE: /run/secrets/admin_scopes
+    volumes:
+      - ./.secrets/admin_key:/run/secrets/admin_key:ro
+      - ./.secrets/admin_scopes.json:/run/secrets/admin_scopes:ro

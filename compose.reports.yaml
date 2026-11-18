@@ -1,0 +1,6 @@
+services:
+  monitor:
+    environment:
+      MODERATION_API_KEY_FILE: /run/secrets/report_key
+    volumes:
+      - ./.secrets/report_key:/run/secrets/report_key:ro
